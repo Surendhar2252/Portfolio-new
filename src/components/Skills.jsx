@@ -4,24 +4,114 @@ import { useRef, useState } from 'react';
 const categories = ['All', 'Languages', 'Frameworks', 'AI / ML', 'DevOps'];
 
 const skills = [
-  { name: 'Python',            level: 92, category: 'Languages',  icon: '🐍' },
-  { name: 'TypeScript',        level: 85, category: 'Languages',  icon: '📘' },
-  { name: 'Java',              level: 75, category: 'Languages',  icon: '☕' },
-  { name: 'SQL',               level: 80, category: 'Languages',  icon: '🗃️' },
-  { name: 'React',             level: 90, category: 'Frameworks', icon: '⚛️' },
-  { name: 'FastAPI',           level: 88, category: 'Frameworks', icon: '⚡' },
-  { name: 'Tailwind CSS',      level: 85, category: 'Frameworks', icon: '🎨' },
-  { name: 'Supabase',          level: 78, category: 'Frameworks', icon: '🟢' },
-  { name: 'GraphQL',           level: 72, category: 'Frameworks', icon: '🔗' },
-  { name: 'PyTorch',           level: 85, category: 'AI / ML',   icon: '🔥' },
-  { name: 'TensorFlow',        level: 80, category: 'AI / ML',   icon: '🧠' },
-  { name: 'LangChain',         level: 78, category: 'AI / ML',   icon: '🦜' },
-  { name: 'Machine Learning',  level: 88, category: 'AI / ML',   icon: '📊' },
-  { name: 'Data Visualization',level: 82, category: 'AI / ML',   icon: '📈' },
-  { name: 'Docker',            level: 76, category: 'DevOps',    icon: '🐳' },
-  { name: 'REST APIs',         level: 92, category: 'DevOps',    icon: '🌐' },
-  { name: 'AWS Lambda',        level: 70, category: 'DevOps',    icon: '☁️' },
-  { name: 'PostgreSQL',        level: 78, category: 'DevOps',    icon: '🐘' },
+  {
+    name: 'Python',
+    level: 92,
+    category: 'Languages',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg',
+  },
+  {
+    name: 'TypeScript',
+    level: 85,
+    category: 'Languages',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg',
+  },
+  {
+    name: 'Java',
+    level: 75,
+    category: 'Languages',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/java.svg',
+  },
+  {
+    name: 'SQL',
+    level: 80,
+    category: 'Languages',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg',
+  },
+  {
+    name: 'React',
+    level: 90,
+    category: 'Frameworks',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg',
+  },
+  {
+    name: 'FastAPI',
+    level: 88,
+    category: 'Frameworks',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fastapi.svg',
+  },
+  {
+    name: 'Tailwind CSS',
+    level: 85,
+    category: 'Frameworks',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg',
+  },
+  {
+    name: 'Supabase',
+    level: 78,
+    category: 'Frameworks',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/supabase.svg',
+  },
+  {
+    name: 'GraphQL',
+    level: 72,
+    category: 'Frameworks',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/graphql.svg',
+  },
+  {
+    name: 'PyTorch',
+    level: 85,
+    category: 'AI / ML',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pytorch.svg',
+  },
+  {
+    name: 'TensorFlow',
+    level: 80,
+    category: 'AI / ML',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg',
+  },
+  {
+    name: 'LangChain',
+    level: 78,
+    category: 'AI / ML',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/langchain.svg',
+  },
+  {
+    name: 'Machine Learning',
+    level: 88,
+    category: 'AI / ML',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/machinelearning.svg',
+  },
+  {
+    name: 'Data Visualization',
+    level: 82,
+    category: 'AI / ML',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/plotly.svg',
+  },
+  {
+    name: 'Docker',
+    level: 76,
+    category: 'DevOps',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg',
+  },
+  {
+    name: 'REST APIs',
+    level: 92,
+    category: 'DevOps',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postman.svg',
+  },
+  {
+    name: 'AWS Lambda',
+    level: 70,
+    category: 'DevOps',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/awslambda.svg',
+  },
+  {
+    name: 'PostgreSQL',
+    level: 78,
+    category: 'DevOps',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg',
+  },
 ];
 
 function SkillBar({ skill, index }) {
@@ -39,8 +129,18 @@ function SkillBar({ skill, index }) {
       className="glass glass-hover rounded-2xl p-5"
     >
       <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-2">
-          <span className="text-xl">{skill.icon}</span>
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-700/70 bg-slate-950/80 p-2">
+            <img
+              src={skill.logo}
+              alt={`${skill.name} logo`}
+              className="h-full w-full object-contain"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22%3E%3Crect width=%2224%22 height=%2224%22 fill=%22%23666%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dy=%22.35em%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22 font-family=%22Arial,%20sans-serif%22%3E%3F%3C/text%3E%3C/svg%3E';
+              }}
+            />
+          </div>
           <p className="text-sm font-semibold text-white">{skill.name}</p>
         </div>
         <span className="text-xs font-bold gradient-text-static">{skill.level}%</span>

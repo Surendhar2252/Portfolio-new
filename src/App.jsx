@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import Hero from './components/Hero';
-import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
 
 const navItems = [
   { label: 'Home',         href: '#home' },
@@ -273,19 +273,10 @@ export default function App() {
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 pt-8 md:px-8">
 
         {/* Hero */}
-        <motion.div initial="hidden" animate="visible" variants={fadeUp} id="home">
+        <motion.div initial="hidden" animate="visible" variants={fadeUp} id="home" className="relative">
+          <div id="about" className="absolute -top-24" />
           <Hero />
         </motion.div>
-
-        {/* About */}
-        <motion.section
-          initial="hidden" whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          variants={fadeUp}
-          id="about" className="mt-24"
-        >
-          <About />
-        </motion.section>
 
         {/* Skills */}
         <motion.section
@@ -337,6 +328,8 @@ export default function App() {
           <Contact />
         </motion.section>
       </main>
+
+      <Chatbot />
 
       {/* ─── Footer ──────────────────────────────────────── */}
       <footer className="relative z-10 border-t border-slate-800/60 bg-slate-950/80 backdrop-blur-xl">

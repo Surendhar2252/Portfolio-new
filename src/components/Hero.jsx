@@ -8,13 +8,6 @@ const headlines = [
   'Designing Scalable Architectures',
 ];
 
-const stats = [
-  { value: '15+', label: 'Projects Built' },
-  { value: '95%', label: 'Model Accuracy' },
-  { value: '3+', label: 'Years Learning' },
-  { value: '10k+', label: 'Lines of Code' },
-];
-
 const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
@@ -119,18 +112,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stat badges */}
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-4 pt-2">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl border border-slate-800/80 bg-slate-950/60 px-5 py-3 text-center"
-              >
-                <p className="text-xl font-bold gradient-text-static">{s.value}</p>
-                <p className="mt-0.5 text-xs text-slate-500">{s.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
 
         {/* ─── Right column ─────────────────── */}
@@ -140,7 +121,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
           className="flex flex-col gap-5"
         >
-          {/* Avatar card */}
+          {/* Profile + About card */}
           <div className="glass glow-card rounded-[2rem] p-6 text-center">
             <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 ring-pulse text-4xl font-black text-slate-950">
               AD
@@ -150,6 +131,13 @@ export default function Hero() {
             <div className="mt-3 flex items-center justify-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-xs text-slate-400">Open to opportunities</span>
+            </div>
+            <div className="mt-6 border-t border-slate-800/70 pt-6 text-left">
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-500">About Me</p>
+              <h3 className="mt-3 text-xl font-semibold text-white">Building AI products that people actually love.</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                I turn research-led models into polished, production-ready applications by combining ML engineering, cloud-native APIs, and delightful UX.
+              </p>
             </div>
           </div>
 
