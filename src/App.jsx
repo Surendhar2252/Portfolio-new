@@ -189,10 +189,10 @@ export default function App() {
             className="group flex items-center gap-2"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 text-sm font-black text-slate-950">
-              AD
+              SM
             </span>
             <span className="text-sm font-semibold text-white transition group-hover:text-cyan-300">
-              Alexander Dai
+              Surendhar M S
             </span>
           </a>
 
@@ -337,8 +337,8 @@ export default function App() {
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <div className="flex items-center gap-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 text-sm font-black text-slate-950">AD</span>
-                <span className="font-semibold text-white">Alexander Dai</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 text-sm font-black text-slate-950">SM</span>
+                <span className="font-semibold text-white">Surendhar M S</span>
               </div>
               <p className="mt-3 text-sm text-slate-500 max-w-xs">
                 AI/ML & Full-Stack engineer building the next generation of intelligent applications.
@@ -380,7 +380,7 @@ export default function App() {
           </div>
           <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-800/50 pt-6 md:flex-row">
             <p className="text-xs text-slate-600">
-              © {new Date().getFullYear()} Alexander Dai. Crafted with React, Tailwind & Framer Motion.
+              © {new Date().getFullYear()} Surendhar M S. Crafted with React, Tailwind & Framer Motion.
             </p>
             <div className="flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />

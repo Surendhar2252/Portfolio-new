@@ -113,8 +113,9 @@ export default function Chatbot() {
         onClick={() => setOpen((prev) => !prev)}
         aria-label={open ? 'Close chatbot' : 'Open chatbot'}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-7 w-7 fill-slate-950">
-          <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2h11A2.5 2.5 0 0 1 20 4.5v9A2.5 2.5 0 0 1 17.5 16H7l-3 3V4.5Zm2.5-.5a.5.5 0 0 0-.5.5v11.7L7.8 16H17.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-11Z" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-7 w-7 stroke-slate-950" fill="none" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.5 12.75L21 3.5 13.5 21 10.5 13.5 2.5 12.75Z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21L21 3.5" />
         </svg>
       </motion.button>
 

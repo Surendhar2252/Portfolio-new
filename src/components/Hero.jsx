@@ -124,9 +124,9 @@ export default function Hero() {
           {/* Profile + About card */}
           <div className="glass glow-card rounded-[2rem] p-6 text-center">
             <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 ring-pulse text-4xl font-black text-slate-950">
-              AD
+              SM
             </div>
-            <p className="font-semibold text-white">Alexander Dai</p>
+            <p className="font-semibold text-white">Surendhar M S</p>
             <p className="mt-1 text-sm text-cyan-300">AI / Full-Stack Engineer</p>
             <div className="mt-3 flex items-center justify-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
